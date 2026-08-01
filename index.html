@@ -495,10 +495,105 @@ button,input{font:inherit}
     font-weight: 600;
   }
 
-  .more {
-    font-size: 0.9rem;
+  /* ---------- also in the open ---------- */
+
+  .also {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding-top: 0.6rem;
+  }
+
+  .also-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 1rem;
+  }
+
+  .also-all {
+    margin-left: auto;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .also-all:hover {
+    color: var(--signal);
+  }
+
+  .repos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  @media (min-width: 44rem) {
+    .repos {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .repos li {
+    background: var(--surface);
+    padding: 0.8rem 0.9rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.15rem 0.6rem;
+    align-items: baseline;
+  }
+
+  .repos li > a {
+    min-width: 0;
+    text-decoration: none;
+  }
+
+  .repo-name {
+    font-family: var(--mono);
+    font-size: 0.775rem;
+    color: var(--accent);
+    overflow-wrap: anywhere;
+  }
+
+  .repos li > a:hover .repo-name {
+    color: var(--signal);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .repo-lang {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: var(--muted);
-    padding-top: 0.3rem;
+    white-space: nowrap;
+  }
+
+  .repo-desc {
+    grid-column: 1 / -1;
+    font-size: 0.83rem;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+
+  .fact-l a {
+    color: inherit;
+    text-decoration-color: var(--rule);
+  }
+
+  .fact-l a:hover {
+    color: var(--signal);
   }
 
   /* ---------- toolkit ---------- */
@@ -723,6 +818,7 @@ button,input{font:inherit}
       <div class="links reveal">
         <a href="mailto:krishkumarmath@gmail.com">krishkumarmath@gmail.com</a>
         <a href="https://github.com/krishkumar6">github.com/krishkumar6</a>
+        <a href="https://leetcode.com/u/krish_3v/">leetcode.com/u/krish_3v</a>
         <a href="https://krishkumar6.github.io">krishkumar6.github.io</a>
         <a href="tel:+919149092573">+91 91490 92573</a>
       </div>
@@ -741,7 +837,7 @@ button,input{font:inherit}
         </div>
         <div class="fact">
           <span class="fact-n">500+</span>
-          <span class="fact-l">DSA problems in Java</span>
+          <span class="fact-l"><a href="https://leetcode.com/u/krish_3v/">DSA problems on LeetCode</a></span>
         </div>
         <div class="fact">
           <span class="fact-n">3</span>
@@ -854,7 +950,64 @@ button,input{font:inherit}
 
       </div>
 
-      <p class="more">Also on GitHub: a Spring Boot 3.5 expense-tracker API, a bank management system, a URL shortener, and pathfinding &amp; sorting visualisers — <a href="https://github.com/krishkumar6?tab=repositories">all repositories</a>.</p>
+      <div class="also">
+        <div class="also-head">
+          <span class="eyebrow">Also in the open</span>
+          <a class="also-all" href="https://github.com/krishkumar6?tab=repositories">All repositories →</a>
+        </div>
+        <ul class="repos">
+          <li>
+            <a href="https://github.com/krishkumar6/smart-expense-tracker-api"><span class="repo-name">smart-expense-tracker-api</span></a>
+            <span class="repo-lang">Java</span>
+            <span class="repo-desc">Personal expense REST API — Java 17 + Spring Boot 3.5, JSON-file storage, 71 tests, OpenAPI/Swagger docs.</span>
+          </li>
+          <li>
+            <a href="https://github.com/krishkumar6/smart-resume-checker"><span class="repo-name">smart-resume-checker</span></a>
+            <span class="repo-lang">Java</span>
+            <span class="repo-desc">Résumé screening and job-matching service.</span>
+          </li>
+          <li>
+            <a href="https://github.com/krishkumar6/job-portal"><span class="repo-name">job-portal</span></a>
+            <span class="repo-lang">JavaScript</span>
+            <span class="repo-desc">Job listing and application portal.</span>
+          </li>
+          <li>
+            <a href="https://github.com/krishkumar6/Bank-management-System"><span class="repo-name">Bank-management-System</span></a>
+            <span class="repo-lang">Java</span>
+            <span class="repo-desc">Account and transaction management.</span>
+          </li>
+          <li>
+            <a href="https://github.com/krishkumar6/URL_SHORTNER-master"><span class="repo-name">URL_SHORTNER-master</span></a>
+            <span class="repo-lang">JavaScript</span>
+            <span class="repo-desc">Link shortening service.</span>
+          </li>
+          <li>
+            <a href="https://github.com/krishkumar6/Pathfinding-Visualizer"><span class="repo-name">Pathfinding-Visualizer</span></a>
+            <span class="repo-lang">CSS</span>
+            <span class="repo-desc">Graph traversal, animated step by step.</span>
+          </li>
+          <li>
+            <a href="https://github.com/krishkumar6/sorting-visualizer"><span class="repo-name">sorting-visualizer</span></a>
+            <span class="repo-lang">JavaScript</span>
+            <span class="repo-desc">Sorting algorithms, animated step by step.</span>
+          </li>
+          <li>
+            <a href="https://github.com/krishkumar6/Budget-Manager"><span class="repo-name">Budget-Manager</span></a>
+            <span class="repo-lang">C++</span>
+            <span class="repo-desc">Command-line budget tracking.</span>
+          </li>
+          <li>
+            <a href="https://github.com/krishkumar6/travler-planer"><span class="repo-name">travler-planer</span></a>
+            <span class="repo-lang">JavaScript</span>
+            <span class="repo-desc">Trip planning interface.</span>
+          </li>
+          <li>
+            <a href="https://github.com/krishkumar6/krishkumar6.github.io"><span class="repo-name">krishkumar6.github.io</span></a>
+            <span class="repo-lang">CSS</span>
+            <span class="repo-desc">Source for the engineering blog.</span>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="section" id="toolkit">
@@ -924,15 +1077,22 @@ button,input{font:inherit}
       <div class="stack-list">
         <div class="row">
           <div class="row-main">
-            <span class="row-title"><a href="https://krishkumar6.github.io">Monolithic vs. microservices architecture &amp; database sharding</a></span>
+            <span class="row-title"><a href="https://krishkumar6.github.io/2026/07/system-design-monolith-microservices-sharding/">Monolithic vs. microservices architecture &amp; database sharding</a></span>
             <span class="row-sub">Where splitting a service actually pays off, and what sharding costs you.</span>
           </div>
-          <span class="row-side">Blog</span>
+          <span class="row-side">Jul 2026</span>
         </div>
         <div class="row">
           <div class="row-main">
-            <span class="row-title"><a href="https://krishkumar6.github.io">Scalability, load balancing &amp; consistent hashing</a></span>
+            <span class="row-title"><a href="https://krishkumar6.github.io/2026/07/system-design-scalability-and-consistent-hashing/">Scalability, load balancing &amp; consistent hashing</a></span>
             <span class="row-sub">How requests get spread, and why the hash ring matters when nodes come and go.</span>
+          </div>
+          <span class="row-side">Jul 2026</span>
+        </div>
+        <div class="row">
+          <div class="row-main">
+            <span class="row-title"><a href="https://krishkumar6.github.io">All posts — krishkumar6.github.io</a></span>
+            <span class="row-sub">Engineering blog on system design and software engineering.</span>
           </div>
           <span class="row-side">Blog</span>
         </div>
@@ -985,6 +1145,8 @@ button,input{font:inherit}
           <a href="mailto:krishkumarmath@gmail.com">krishkumarmath@gmail.com</a>
           <a href="tel:+919149092573">+91 91490 92573</a>
           <a href="https://github.com/krishkumar6">GitHub</a>
+          <a href="https://leetcode.com/u/krish_3v/">LeetCode</a>
+          <a href="https://krishkumar6.github.io">Blog</a>
           <a href="https://krishkumar6.github.io/resume/">Résumé</a>
         </div>
       </div>
