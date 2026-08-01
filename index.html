@@ -262,6 +262,46 @@ button,input{font:inherit}
 
   /* ---------- response panel ---------- */
 
+  .cv-line {
+    margin: 0;
+  }
+
+  .cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    color: var(--accent);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 0.55rem 0.9rem;
+    text-decoration: none;
+    transition: border-color 160ms ease, color 160ms ease;
+  }
+
+  .cv::before {
+    content: "↓";
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+
+  .cv:hover {
+    color: var(--signal);
+    border-color: var(--signal);
+  }
+
+  .cv-meta {
+    color: var(--muted);
+    font-size: 0.65rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding-left: 0.7rem;
+    border-left: 1px solid var(--rule);
+  }
+
   .panel {
     background: var(--surface);
     border: 1px solid var(--rule);
@@ -823,6 +863,8 @@ button,input{font:inherit}
         <a href="tel:+919149092573">+91 91490 92573</a>
       </div>
 
+      <p class="cv-line reveal"><a class="cv" href="krish-kumar-resume.pdf" download>Download résumé<span class="cv-meta">PDF · 1 page</span></a></p>
+
       <div class="panel reveal">
         <div class="panel-head">
           <span class="verb">GET</span><span>/krish-kumar</span><span class="code">200 OK</span>
@@ -1140,7 +1182,7 @@ button,input{font:inherit}
           <a href="https://github.com/krishkumar6">GitHub</a>
           <a href="https://leetcode.com/u/krish_3v/">LeetCode</a>
           <a href="https://krishkumar6.github.io">Blog</a>
-          <a href="https://krishkumar6.github.io/resume/">Résumé</a>
+          <a href="krish-kumar-resume.pdf" download>Résumé (PDF)</a>
         </div>
       </div>
       <p class="foot">Krish Kumar — Bangalore, India</p>
